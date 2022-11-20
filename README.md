@@ -60,37 +60,51 @@ D7 = X Y Z
 
 
 ### PROGRAM 
-/*
+```
 Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:Manoj Choudhary V
+RegisterNumber: 212221240025
 
+ENCODER 
 
+module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+input d0,d1,d2,d3,d4,d5,d6,d7;
+output a,b,c;
+or(a,d4,d5,d6,d7);
+or(b,d2,d3,d6,d7);
+or(c,d1,d3,d5,d7);
+endmodule
 
+DECODER
 
-
-
+module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+input a,b,c;
+output d0,d1,d2,d3,d4,d5,d6,d7;
+assign d0 = (~a&~b&~c);
+assign d1 = (~a&~b&c);
+assign d2 = (~a&b&~c);
+assign d3 = (~a&b&c);
+assign d4 = (a&~b&~c);
+assign d5 = (a&~b&c);
+assign d6 = (a&b&~c);
+assign d7 = (a&b&c);
+endmodule
+```
 ### RTL LOGIC  
-
-
-
-
-
-
-
-
+## ENCODER:
+![](1.png)
+## DECODER:
+![](2.png)
 ### TIMING DIGRAMS  
-
-
-
-
-
+## ENCODER
+![](3.png)
+## DECODER
+![](4.png)
 ### TRUTH TABLE 
-
-
-
-
-
-
+## ENCODER
+![](5.png)
+## DECODER
+![](6.png)
 ### RESULTS 
+Thus, 8 to 3 Encoder and 3 to 8 Decoder is implemented using verilog and its outputs is validated.
+
