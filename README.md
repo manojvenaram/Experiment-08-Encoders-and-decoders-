@@ -55,7 +55,13 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 ### Procedure
-/* write all the steps invloved */
+1. Open Quartus II and select new project and choose the file location.
+2. Module Declaration. Module should have the file name.
+3. Input-Output Delecaration.
+4. Use assign to define the functionality of logic circuits.
+5. At the end give endmodule.
+6. Run the program and choose RTL viewer to get RTL realization.
+PROGRAM
 
 
 
